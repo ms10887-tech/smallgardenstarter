@@ -1,0 +1,334 @@
+:root {
+  --bg: #fbf6ec;
+  --surface: #fffaf1;
+  --surface-strong: #f1e4d1;
+  --text: #22313b;
+  --muted: #5f6b68;
+  --cta: #4f8f63;
+  --cta-dark: #37694a;
+  --line: #e7d8c4;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+}
+
+.site-header,
+.site-footer {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+.site-header {
+  padding: 18px 0;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.brand-mark {
+  display: inline-grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--cta);
+  color: var(--white);
+}
+
+.hero {
+  display: grid;
+  gap: 24px;
+  width: min(1120px, calc(100% - 32px));
+  margin: 12px auto 44px;
+  padding: 40px 0 8px;
+}
+
+.hero-content h1,
+.center-panel h1 {
+  max-width: 760px;
+  margin: 0;
+  font-size: clamp(2.25rem, 9vw, 4.8rem);
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+.subtitle,
+.hero-content p,
+.center-panel p,
+.offer-card p,
+.form-card p,
+.legal-page p {
+  color: var(--muted);
+}
+
+.subtitle {
+  max-width: 720px;
+  font-size: 1.2rem;
+}
+
+.eyebrow,
+.card-label {
+  margin: 0 0 10px;
+  color: var(--cta-dark);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+  padding: 14px 20px;
+  border-radius: 8px;
+  font-weight: 800;
+  text-align: center;
+  text-decoration: none;
+}
+
+.button.primary {
+  background: var(--cta);
+  color: var(--white);
+}
+
+.button.primary:hover,
+.button.primary:focus-visible {
+  background: var(--cta-dark);
+}
+
+.offer-card,
+.note-card,
+.form-card,
+.center-panel,
+.steps article {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  box-shadow: 0 12px 32px rgba(34, 49, 59, 0.07);
+}
+
+.offer-card {
+  padding: 24px;
+}
+
+.offer-card h2,
+.form-card h2,
+.content-band h2,
+.legal-page h1 {
+  margin-top: 0;
+  line-height: 1.15;
+}
+
+.content-band {
+  padding: 40px 0;
+  background: #fffdf8;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.content-band.compact {
+  margin-top: 34px;
+}
+
+.section-inner,
+.form-section,
+.page-shell,
+.legal-page {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+.two-column {
+  display: grid;
+  gap: 22px;
+}
+
+.check-list {
+  display: grid;
+  gap: 10px;
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.check-list li {
+  position: relative;
+  padding-left: 30px;
+}
+
+.check-list li::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--cta-dark);
+  content: "+";
+  font-weight: 900;
+}
+
+.note-card {
+  padding: 22px;
+}
+
+.note-card h3 {
+  margin: 0 0 8px;
+}
+
+.form-section {
+  padding: 44px 0;
+}
+
+.form-card,
+.center-panel {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.brevo-form {
+  display: block;
+  width: 100%;
+  min-height: 620px;
+  margin: 22px 0 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--white);
+}
+
+.form-fallback {
+  margin: 0 0 18px;
+  font-size: 0.94rem;
+  text-align: center;
+}
+
+.fine-print {
+  font-size: 0.92rem;
+}
+
+.page-shell {
+  padding: 28px 0 44px;
+}
+
+.center-panel {
+  text-align: center;
+}
+
+.center-panel .button {
+  margin: 12px 0;
+}
+
+.steps {
+  display: grid;
+  gap: 16px;
+}
+
+.steps article {
+  padding: 20px;
+}
+
+.steps span {
+  display: inline-grid;
+  width: 32px;
+  height: 32px;
+  margin-bottom: 12px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--surface-strong);
+  color: var(--cta-dark);
+  font-weight: 900;
+}
+
+.steps h3 {
+  margin: 0 0 8px;
+  line-height: 1.25;
+}
+
+.steps p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.legal-page {
+  max-width: 860px;
+  padding: 28px 0 54px;
+}
+
+.legal-page h2 {
+  margin-top: 28px;
+  line-height: 1.2;
+}
+
+.site-footer {
+  display: grid;
+  gap: 12px;
+  padding: 24px 0 32px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.94rem;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+.site-footer nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.site-footer a {
+  color: var(--text);
+}
+
+@media (min-width: 760px) {
+  .hero {
+    grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+    align-items: center;
+    padding-top: 68px;
+  }
+
+  .two-column {
+    grid-template-columns: minmax(0, 1fr) 340px;
+    align-items: start;
+  }
+
+  .steps {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .form-card,
+  .center-panel {
+    padding: 34px;
+  }
+
+  .site-footer {
+    grid-template-columns: 1fr auto;
+    align-items: center;
+  }
+}
